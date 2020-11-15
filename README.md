@@ -45,10 +45,3 @@ Alright, this was the sadest defeat of my life. I had gotten something that I th
 A first year Multi-Media project that became this. Man, it waas fun making the website for this, although it was nothing special. I really enjoyed the project as a whole... even if I did quite a bit of it solo.
 
 [Check Out The Blog](https://AstroCoding.github.io/dormEntertainmentSystem)
-
-
-### The Dorm Entertainment System Blog
-
-A first year Multi-Media project that became this. Man, it waas fun making the website for this, although it was nothing special. I really enjoyed the project as a whole... even if I did quite a bit of it solo.
-
-[Check Out The Blog](https://AstroCoding.github.io/dormEntertainmentSystem)
