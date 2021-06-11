@@ -10,6 +10,12 @@ Or, you can go to an exiting page I have set up showing off my many projects:
 
 ## My Projects:
 
+### BTD6 Autoplay
+
+A fun Python bot that will load JSON configuration files and play the game according to the instructions present in the JSON files. With the latest updates, it is far easier to make new maps now and design a script for every map.
+
+[Check out BTD6 Autoplay](https://github.com/Jazzmoon/btd6_autoplay)
+
 ### mark-hutchison.codes
 
 This is a little sample resume I have been working on. It is nothing special, but it does have a couple websites that I developed freelance, and some general information about myself.
@@ -26,13 +32,13 @@ So, being a cool guy, I made him a CSS template to use, and put it on GitHub pag
 ### Pixel Painter
 
 Ever just want to doodle some pixel art, but don't want to download any painting softwares? Well, I did... So I made a website using P5.js that allows you to make Pixel art. It has your basic colours, plus a "Pick a Colour" option and fill bucket.
-[Check Out Pixel Painter](https://AstroCoding.github.io/pixel-painter/)
+[Check Out Pixel Painter](https://Jazzmoon.github.io/pixel-painter/)
 
 ### hashi-js
 
 I am addicted to the game Hashi. I absolutely love the varients I have played and just knew I had to code it. So I grabbed P5.js and made my own version. Sadly, due to time constraints, I couldn't add the prevention of bridge overlap like is in actaul Hashi, but it does have randomly generated boards (all of which are 100% possible).
 
-[Check Out hashi-js](https://AstroCoding.github.io/hashi-js/)
+[Check Out hashi-js](https://Jazzmoon.github.io/hashi-js/)
 
 ### 1 hour challenge (Trivia)
 
