@@ -760,16 +760,17 @@
 				scheduleList = document.getElementById("availability-schedule");
 
 			for (const day in schedule) {
-				const {start, end} = schedule[day],
-					listItem = document.createElement("li"),
-					heading = document.createElement("h5"),
-					strong = document.createElement("strong"),
-					text = document.createTextNode(formatSchedule(start, end));
-				strong.appendChild(`${day}:`);
-				heading.appendChild(text);
-				listItem.appendChild(heading);
-				listItem.appendChild(strong);
-				scheduleList.appendChild(listItem);
+				const {start, end} = schedule[day];
+				scheduleList.appendChild(
+					document.createElement("li").appendChild(
+						document.createElement("h5")
+							.appendChild(
+								document.createElement("strong")
+									.appendChild(document.createTextNode(`${day}:`))
+							)
+							.appendChild(document.createTextNode(formatSchedule(start, end)))
+					)
+				);
 			}
 		</script>
 
