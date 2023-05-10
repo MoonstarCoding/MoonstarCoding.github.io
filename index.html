@@ -753,8 +753,8 @@
 					"Monday": {"start": "2023-05-08T13:00:00Z", "end": "2023-05-08T22:00:00Z"},
 					"Tuesday": {"start": "2023-05-09T13:00:00Z", "end": "2023-05-09T22:00:00Z"},
 					"Wednesday": {"start": "2023-05-10T13:00:00Z", "end": "2023-05-10T22:00:00Z"},
-					"Thursday": {"start": "2023-05-11T13:00:00Z", "end": "2023-05-11T11:00:00Z"},
-					"Friday": {"start": "2023-05-12T13:00:00Z", "end": "2023-05-12T11:00:00Z"},
+					"Thursday": {"start": "2023-05-11T13:00:00Z", "end": "2023-05-11T22:00:00Z"},
+					"Friday": {"start": "2023-05-12T13:00:00Z", "end": "2023-05-12T21:00:00Z"},
 					"Saturday": {"start": "2023-05-13T14:30:00Z", "end": "2023-05-13T22:00:00Z"}
 				},
 				scheduleList = document.getElementById("availability-schedule");
@@ -766,7 +766,7 @@
 					h5 = document.createElement("h5"),
 					strong = document.createElement("strong");
 				// Assemble
-				strong.appendChild(document.createTextNode(`${day}:`));
+				strong.appendChild(document.createTextNode(`${day}: `));
 				h5.appendChild(strong);
 				h5.appendChild(document.createTextNode(formatSchedule(start, end)));
 				li.appendChild(h5);
