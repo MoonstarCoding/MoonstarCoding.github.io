@@ -761,16 +761,18 @@
 
 			for (const day in schedule) {
 				const {start, end} = schedule[day];
-				scheduleList.appendChild(
-					document.createElement("li").appendChild(
-						document.createElement("h5")
-							.appendChild(
-								document.createElement("strong")
-									.appendChild(document.createTextNode(`${day}:`))
-							)
-							.appendChild(document.createTextNode(formatSchedule(start, end)))
-					)
-				);
+				// Create Elements
+				const li = document.createElement("li"),
+					h5 = document.createElement("h5"),
+					strong = document.createElement("strong");
+				// Create text nodes
+				const dayText = document.createTextNode(`${day}:`);
+				// Assemble
+				strong.appendChild(document.createTextNode(`${day}:`));
+				h5.appendChild(strong);
+				h5.appendChild(document.createTextNode(formatSchedule(start, end)));
+				li.appendChild(h5);
+				scheduleList.appendChild(li);
 			}
 		</script>
 
