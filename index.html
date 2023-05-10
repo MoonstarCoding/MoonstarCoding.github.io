@@ -6,7 +6,7 @@
 		<title>Mark Hutchison</title>
 		<meta name="author" content="Mark Hutchison" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="An aspiring computer scientist with a passion for back-end web development." />
+		<meta name="description" content="An aspiring computer scientist with a passion for back-end web develo:00ent." />
 		<meta name="keywords" content="Resume, Portfolio, Education, Work, Job, Computer, Science, Engineer, Developer, Database, Front-End, Back-End" />
 
 		<!-- Facebook and Twitter integration -->
@@ -14,12 +14,12 @@
 		<meta property="og:image" content="images/profile.jpg"/>
 		<meta property="og:url" content="https://astrocoding.github.io/"/>
 		<meta property="og:site_name" content="Mark Hutchison"/>
-		<meta property="og:description" content="An aspiring computer scientist with a passion for back-end web development."/>
+		<meta property="og:description" content="An aspiring computer scientist with a passion for back-end web develo:00ent."/>
 
 		<meta name="twitter:title" content="Mark Hutchison" />
 		<meta name="twitter:image" content="images/profile.jpg" />
 		<meta name="twitter:url" content="https://astrocoding.github.io/" />
-		<meta name="twitter:card" content="An aspiring computer scientist with a passion for back-end web development." />
+		<meta name="twitter:card" content="An aspiring computer scientist with a passion for back-end web develo:00ent." />
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="shortcut icon" href="favicon.ico">
@@ -115,7 +115,7 @@
 											<div class="slider-text-inner js-fullheight">
 												<div class="desc">
 													<h1>Hi! <br>I'm Mark</h1>
-													<h2>A McMaster Alumni with a passion for Web Development.</h2>
+													<h2>A McMaster Alumni with a passion for Web Develo:00ent.</h2>
 												</div>
 											</div>
 										</div>
@@ -165,7 +165,7 @@
 										<div class="about-desc">
 											<span class="heading-meta">About Us</span>
 											<h2 class="colorlib-heading">Who Am I?</h2>
-											<p><strong>Hi, I'm Mark Hutchison.</strong> I am a <strong>McMaster Computer Science</strong> alumni looking for opportunities to further my development in the coding world. I have a personal love of the web development world, including both front-end and back-end work. However, if I had to choose, I would always pick back-end development due to the logical nature of the workflow.</p>
+											<p><strong>Hi, I'm Mark Hutchison.</strong> I am a <strong>McMaster Computer Science</strong> alumni looking for opportunities to further my develo:00ent in the coding world. I have a personal love of the web develo:00ent world, including both front-end and back-end work. However, if I had to choose, I would always pick back-end develo:00ent due to the logical nature of the workflow.</p>
 											<p>Over the past 6+ years, I have refined my full stack skills and ready to apply my skills in the workplace. Although it is my preference to work remotely, I would be willing to commute or even relocate if needed.</p>
 										</div>
 									</div>
@@ -216,7 +216,7 @@
 										<i class="icon-data"></i>
 									</span>
 									<div class="desc">
-										<h3>Back-End Development</h3>
+										<h3>Back-End Develo:00ent</h3>
 										<p style="margin-bottom: 0;">With experience in many languages and frameworks, like:</p>
 										<ul class="text-left">
 											<li>GoLang Echo</li>
@@ -232,7 +232,7 @@
 										<i class="icon-layers2"></i>
 									</span>
 									<div class="desc">
-										<h3>Front-End Development</h3>
+										<h3>Front-End Develo:00ent</h3>
 										<p style="margin-bottom: 0;">Experience using:</p>
 										<ul class="text-left">
 											<li>Raw HTML and CSS</li>
@@ -380,7 +380,7 @@
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 								<div class="progress-wrap">
-									<h3>Front-End Development (ReactJS)</h3>
+									<h3>Front-End Develo:00ent (ReactJS)</h3>
 									<div class="progress">
 										<div class="progress-bar color-2" role="progressbar" aria-valuenow="55"
 											aria-valuemin="0" aria-valuemax="100" style="width:55%">
@@ -728,15 +728,7 @@
 								<div class="row">
 									<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
 										<h3>Available for Interview:</h3>
-										<ul class="text-left">
-											<li><h5><strong>Sunday:</strong> 12:30pm - 6:00pm</h5></li>
-											<li><h5><strong>Monday:</strong> 9:00am - 6:00pm</h5></li>
-											<li><h5><strong>Tuesday:</strong> 9:00am - 6:00pm</h5></li>
-											<li><h5><strong>Wednesday:</strong> 9:00am - 6:00pm</h5></li>
-											<li><h5><strong>Thursday:</strong> 9:00am - 6:00pm</h5></li>
-											<li><h5><strong>Friday:</strong> 9:00am - 6:00pm</h5></li>
-											<li><h5><strong>Saturday:</strong> 10:30am - 6:00pm</h5></li>
-										</ul>
+										<ul id="availability-schedule" class="text-left"></ul>
 									</div>
 								</div>
 							</div>
@@ -747,6 +739,37 @@
 			</div><!-- end:colorlib-main -->
 		</div><!-- end:container-wrap -->
 		</div><!-- end:colorlib-page -->
+
+		<!-- Availability Schedule Generator -->
+		<script lang="js">
+			function formatSchedule(day, utcStart, utcEnd) {
+				const options = { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, timeZoneName: 'short', hour: 'numeric', minute: 'numeric', hour12: true },
+					start = new Date(utcStart).toLocaleTimeString('en-US', options),
+					end = new Date(utcEnd).toLocaleTimeString('en-US', options);
+				return `<strong>${day}:</strong> ${start} - ${end}`;
+			}
+			const schedule = {
+					"Sunday": {"start": "2023-05-07T16:30:00Z", "end": "2023-05-07T22:00:00Z"},
+					"Monday": {"start": "2023-05-08T13:00:00Z", "end": "2023-05-08T22:00:00Z"},
+					"Tuesday": {"start": "2023-05-09T13:00:00Z", "end": "2023-05-09T22:00:00Z"},
+					"Wednesday": {"start": "2023-05-10T13:00:00Z", "end": "2023-05-10T22:00:00Z"},
+					"Thursday": {"start": "2023-05-11T13:00:00Z", "end": "2023-05-11T11:00:00Z"},
+					"Friday": {"start": "2023-05-12T13:00:00Z", "end": "2023-05-12T11:00:00Z"},
+					"Saturday": {"start": "2023-05-13T14:30:00Z", "end": "2023-05-13T22:00:00Z"}
+				},
+				scheduleList = document.getElementById("availability-schedule");
+
+			for (const day in schedule) {
+				const {start, end} = schedule[day],
+					output = formatSchedule(day, start, end),
+					listItem = document.createElement("li"),
+					heading = document.createElement("h5"),
+					text = document.createTextNode(output);
+				heading.appendChild(text);
+				listItem.appendChild(heading);
+				scheduleList.appendChild(listItem);
+			}
+		</script>
 
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
