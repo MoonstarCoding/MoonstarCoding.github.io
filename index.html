@@ -742,11 +742,11 @@
 
 		<!-- Availability Schedule Generator -->
 		<script lang="js">
-			function formatSchedule(day, utcStart, utcEnd) {
+			function formatSchedule(utcStart, utcEnd) {
 				const options = { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, timeZoneName: 'short', hour: 'numeric', minute: 'numeric', hour12: true },
 					start = new Date(utcStart).toLocaleTimeString('en-US', options),
 					end = new Date(utcEnd).toLocaleTimeString('en-US', options);
-				return `<strong>${day}:</strong> ${start} - ${end}`;
+				return `${start} - ${end}`;
 			}
 			const schedule = {
 					"Sunday": {"start": "2023-05-07T16:30:00Z", "end": "2023-05-07T22:00:00Z"},
@@ -761,12 +761,14 @@
 
 			for (const day in schedule) {
 				const {start, end} = schedule[day],
-					output = formatSchedule(day, start, end),
 					listItem = document.createElement("li"),
 					heading = document.createElement("h5"),
-					text = document.createTextNode(output);
+					strong = document.createElement("strong"),
+					text = document.createTextNode(formatSchedule(start, end));
+				strong.appendChild(`${day}:`);
 				heading.appendChild(text);
 				listItem.appendChild(heading);
+				listItem.appendChild(strong);
 				scheduleList.appendChild(listItem);
 			}
 		</script>
