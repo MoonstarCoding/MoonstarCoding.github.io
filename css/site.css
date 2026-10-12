@@ -180,16 +180,11 @@ svg.fill { fill: currentColor; stroke: none; }
 .brand:hover { text-decoration: none; }
 
 .brand-mark {
-	display: grid;
-	place-items: center;
 	width: 34px;
 	height: 34px;
 	border-radius: 10px;
-	font-family: var(--mono);
-	font-size: 0.8rem;
-	font-weight: 500;
-	color: #fff;
-	background: linear-gradient(135deg, var(--accent), var(--accent-2));
+	object-fit: cover;
+	box-shadow: 0 0 0 1px var(--border);
 }
 
 .nav {
@@ -277,13 +272,13 @@ svg.fill { fill: currentColor; stroke: none; }
 .btn-ghost { background: transparent; box-shadow: none; }
 
 /* ==========================================================================
-   Hero
+   About
    ========================================================================== */
-.hero {
+.about {
 	position: relative;
 	padding: 72px 0 40px;
 }
-.hero::before {
+.about::before {
 	content: "";
 	position: absolute;
 	inset: -64px 0 0;
@@ -292,7 +287,7 @@ svg.fill { fill: currentColor; stroke: none; }
 	z-index: -1;
 }
 
-.hero-grid {
+.about-grid {
 	display: grid;
 	grid-template-columns: 1.4fr 1fr;
 	gap: 56px;
@@ -319,7 +314,7 @@ svg.fill { fill: currentColor; stroke: none; }
 	box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
 }
 
-.hero h1 {
+.about h1 {
 	margin: 20px 0;
 	font-size: clamp(2.3rem, 5.5vw, 3.9rem);
 	font-weight: 700;
@@ -346,7 +341,7 @@ svg.fill { fill: currentColor; stroke: none; }
 	margin-top: 28px;
 }
 
-.hero-photo { margin: 0; justify-self: center; }
+.about-photo { margin: 0; justify-self: center; }
 .photo-ring {
 	position: relative;
 	width: min(340px, 70vw);
@@ -368,7 +363,7 @@ svg.fill { fill: currentColor; stroke: none; }
 	transform: translate(16px, 16px);
 	transition: transform 0.4s var(--ease);
 }
-.hero-photo:hover .photo-ring::before { transform: translate(10px, 10px); }
+.about-photo:hover .photo-ring::before { transform: translate(10px, 10px); }
 .photo-ring img {
 	width: 100%;
 	height: 100%;
@@ -927,10 +922,10 @@ svg.fill { fill: currentColor; stroke: none; }
    Responsive
    ========================================================================== */
 @media (max-width: 960px) {
-	.hero-grid,
+	.about-grid,
 	.about-grid,
 	.contact { grid-template-columns: 1fr; }
-	.hero-photo { order: -1; justify-self: start; }
+	.about-photo { order: -1; justify-self: start; }
 	.photo-ring { width: 160px; border-radius: 22px; }
 	.photo-ring::before { border-radius: 22px; transform: translate(10px, 10px); }
 	.photo-ring img { border-radius: 19px; }
@@ -964,7 +959,7 @@ svg.fill { fill: currentColor; stroke: none; }
 	.nav.open { opacity: 1; transform: none; visibility: visible; }
 	.nav a { padding: 12px; font-size: 1rem; }
 
-	.hero { padding-top: 40px; }
+	.about { padding-top: 40px; }
 	.stats { grid-template-columns: 1fr 1fr 1fr; }
 	.stats div { padding: 14px; }
 	.stats dd { font-size: 1.4rem; }
@@ -1008,11 +1003,11 @@ svg.fill { fill: currentColor; stroke: none; }
 		color-scheme: light;
 	}
 	body { font-size: 11pt; line-height: 1.45; }
-	.site-header, .cta-row, .hero-photo, .hero::before, #photos, #projects img,
+	.site-header, .cta-row, .about-photo, .about::before, #photos, #projects img,
 	.site-footer, .skip-link, .lightbox, .stats { display: none !important; }
 	.reveal { opacity: 1 !important; transform: none !important; }
-	.hero { padding: 0; }
-	.hero h1 { font-size: 22pt; margin: 8px 0; }
+	.about { padding: 0; }
+	.about h1 { font-size: 22pt; margin: 8px 0; }
 	.gradient-text { color: #333; background: none; -webkit-text-fill-color: currentColor; }
 	.section { padding-top: 18px; }
 	.section-head { margin-bottom: 10px; }
@@ -1038,8 +1033,8 @@ svg.fill { fill: currentColor; stroke: none; }
 	.print-only { display: block; }
 	.print-name { font-size: 22pt; font-weight: 700; margin: 0 0 4px; }
 	.print-name span { display: block; font-size: 9.5pt; font-weight: 400; color: #333; }
-	.hero h1 { font-size: 13pt; margin: 4px 0; }
-	.hero h1 br, .hero h1 .hi { display: none; }
+	.about h1 { font-size: 13pt; margin: 4px 0; }
+	.about h1 br, .about h1 .hi { display: none; }
 	.level::after { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 	.prose p:last-child { display: none; }
 	.lead { font-size: 10.5pt; max-width: none; }
