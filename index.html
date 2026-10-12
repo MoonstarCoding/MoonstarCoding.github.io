@@ -1,908 +1,447 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Mark Hutchison</title>
-		<meta name="author" content="Mark Hutchison" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="An aspiring computer scientist with a passion for back-end web development." />
-		<meta name="keywords" content="Resume, Portfolio, Education, Work, Job, Computer, Science, Engineer, Developer, Database, Front-End, Back-End" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mark Hutchison — Design Engineer</title>
+	<meta name="author" content="Mark Hutchison">
+	<meta name="description" content="Mark Hutchison — full-stack developer and Design Engineer at Martinrea. McMaster Computer Science alumnus building web platforms, back-end services and plant-floor systems.">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0c0d12" media="(prefers-color-scheme: dark)">
 
-		<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content="Mark Hutchison"/>
-		<meta property="og:image" content="images/profile.jpg"/>
-		<meta property="og:url" content="https://MoonstarCoding.github.io/"/>
-		<meta property="og:site_name" content="Mark Hutchison"/>
-		<meta property="og:description" content="An aspiring computer scientist with a passion for full-stack web development."/>
+	<meta property="og:title" content="Mark Hutchison — Design Engineer">
+	<meta property="og:description" content="Full-stack developer and Design Engineer at Martinrea. McMaster Computer Science alumnus.">
+	<meta property="og:image" content="https://MoonstarCoding.github.io/images/headshot.webp">
+	<meta property="og:url" content="https://MoonstarCoding.github.io/">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary">
 
-		<meta name="twitter:title" content="Mark Hutchison" />
-		<meta name="twitter:image" content="images/profile.jpg" />
-		<meta name="twitter:url" content="https://MoonstarCoding.github.io/" />
-		<meta name="twitter:card" content="An aspiring computer scientist with a passion for full-stack web development." />
+	<link rel="icon" href="favicon.ico">
 
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="shortcut icon" href="favicon.ico">
+	<!-- Apply the saved / system theme before first paint to avoid a flash -->
+	<script>
+		(function () {
+			var t = null;
+			try { t = localStorage.getItem('theme'); } catch (e) {}
+			if (t !== 'light' && t !== 'dark') {
+				t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.dataset.theme = t;
+		})();
+	</script>
 
-		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-		<!-- Animate.css -->
-		<link rel="stylesheet" href="css/animate.css">
-		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="css/icomoon.css">
-		<!-- Bootstrap  -->
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<!-- Flexslider  -->
-		<link rel="stylesheet" href="css/flexslider.css">
-		<!-- Flaticons  -->
-		<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-		<!-- Owl Carousel -->
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
-		<!-- Theme style  -->
-		<link rel="stylesheet" href="css/style.css">
+	<header class="site-header">
+		<div class="container nav-inner">
+			<a class="brand" href="#top" aria-label="Mark Hutchison, back to top">
+				<span class="brand-mark">MH</span>
+				<span class="brand-name">Mark Hutchison</span>
+			</a>
+			<nav class="nav" id="site-nav" aria-label="Primary">
+				<a href="#about">About</a>
+				<a href="#experience">Experience</a>
+				<a href="#skills">Skills</a>
+				<a href="#projects">Projects</a>
+				<a href="#photos">Photos</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="nav-actions">
+				<button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+					<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+					<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+				</button>
+				<button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+				</button>
+			</div>
+		</div>
+	</header>
 
-		<!-- Modernizr JS -->
-		<script src="js/modernizr-2.6.2.min.js"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
-		<script src="js/respond.min.js"></script>
-		<![endif]-->
-
-		<script lang="js">
-			var clipboard = function (link) {
-				navigator.clipboard.writeText(link).then(
-					function () {
-						/* clipboard successfully set */
-						alert(`Link copied to clipboard:\n${link}`);
-					},
-					function () {
-						/* clipboard write failed */
-						alert("Failed to copy link to clipboard!");
-					}
-				);
-			};
-		</script>
-	</head>
-	<body>
-		<div id="colorlib-page">
-			<div class="container-wrap">
-			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-				<div class="text-center">
-					<div class="author-img" style="background-image: url(images/headshot.jpg);"></div>
-					<h1 id="colorlib-logo"><a href="index.html">Mark Hutchison</a></h1>
-					<span class="position"><a href="#">Computer Scientist</a> in Canada</span>
-				</div>
-				<nav id="colorlib-main-menu" role="navigation" class="navbar">
-					<div id="navbar" class="collapse">
-						<ul>
-							<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-							<li><a href="#" data-nav-section="about">About</a></li>
-							<li><a href="#" data-nav-section="services">What do I do?</a></li>
-							<li><a href="#" data-nav-section="skills">Skills</a></li>
-							<li><a href="#" data-nav-section="education">Education</a></li>
-							<li><a href="#" data-nav-section="experience">Work Experience</a></li>
-							<li><a href="#" data-nav-section="work">Projects and Portfolio</a></li>
-							<li><a href="#" data-nav-section="contact">Contact</a></li>
-						</ul>
+	<main id="main">
+		<!-- Hero -->
+		<section class="hero" id="top">
+			<div class="container hero-grid">
+				<div class="hero-copy">
+					<p class="print-only print-name">Mark Hutchison<span>linkedin.com/in/mark-j-hutchison · github.com/MoonstarCoding</span></p>
+					<p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Design Engineer at Martinrea · Ontario, Canada</p>
+					<h1><span class="hi">Hi, I'm Mark.</span><br><span class="gradient-text">Full-stack developer.</span></h1>
+					<p class="lead">McMaster Computer Science alumnus building web applications end to end, from the database schema to the UI. I lean towards the back end — APIs, databases and the infrastructure under them — but I'm happy anywhere in the stack, and I love mentoring the people around me.</p>
+					<div class="cta-row">
+						<a class="btn btn-primary" href="#contact">Get in touch</a>
+						<a class="btn" href="https://github.com/MoonstarCoding" target="_blank" rel="noopener">
+							<svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.8 18.3 5.1 18.3 5.1c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+							GitHub
+						</a>
+						<a class="btn" href="https://linkedin.com/in/mark-j-hutchison/" target="_blank" rel="noopener">
+							<svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+							LinkedIn
+						</a>
+						<button class="btn btn-ghost" type="button" id="print-btn">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg>
+							Print résumé
+						</button>
 					</div>
-				</nav>
+				</div>
+				<figure class="hero-photo">
+					<div class="photo-ring">
+						<img src="images/headshot.webp" alt="Mark Hutchison" width="640" height="640">
+					</div>
+				</figure>
+			</div>
+			<div class="container">
+				<dl class="stats">
+					<div><dt>Years coding</dt><dd>10+</dd></div>
+					<div><dt>Years as a Teaching Assisstant</dt><dd>3</dd></div>
+					<div><dt>At Martinrea since</dt><dd>2024</dd></div>
+				</dl>
+			</div>
+		</section>
 
-				<div class="colorlib-footer">
-					<p>
-						<small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved.<br />Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span>
-					</p>
-					<ul>
-						<li><a class="link-icon" href="https://facebook.com/hutchm6/"><i class="icon-facebook2"></i></a></li>
-						<li><a class="link-icon" href="https://instagram.com/merc.exe/"><i class="icon-instagram"></i></a></li>
-						<li><a class="link-icon" href="https://linkedin.com/in/mark-j-hutchison/"><i class="icon-linkedin2"></i></a></li>
-						<li><a class="link-icon" href="https://github.com/MoonstarCoding"><i class="icon-github"></i></a></li>
+		<!-- About -->
+		<section class="section" id="about">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">01 — About</p>
+					<h2>Who I am</h2>
+				</header>
+				<div class="about-grid">
+					<div class="prose">
+						<p>I'm a <strong>McMaster University Computer Science</strong> graduate who has been writing code since long before university. I love the web — front end and back end — but given the choice I'll always reach for the back end, because I enjoy the logic of designing systems that are correct, fast and easy to reason about.</p>
+						<p>Today I'm a <strong>Design Engineer at Martinrea</strong>, where I work across React, Python and C++ as well as the infrastructure underneath: Proxmox, PostgreSQL, Redis and plant-floor networking. Along the way the role has grown into teaching, mentoring and leading as much as writing code.</p>
+						<p>Outside of work you'll find me at tech conferences, museums, conventions, or putting together a costume. I try never to lose sight of the community around me, both in what I build and in what I do.</p>
+					</div>
+					<ul class="services">
+						<li class="card">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+							<h3>Back-end development</h3>
+							<p>Go (Echo), Python (Django), Node.js (Express, Fastify), C# and C++ services.</p>
+						</li>
+						<li class="card">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5zM2 16l10 5 10-5M2 12l10 5 10-5"/></svg>
+							<h3>Front-end development</h3>
+							<p>React, Next.js, Svelte and Angular; Tailwind and shadcn/ui; server templates like Blade and htmx.</p>
+						</li>
+						<li class="card">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+							<h3>Data &amp; protocols</h3>
+							<p>PostgreSQL, MySQL, SQLite, MongoDB and Neo4j. REST APIs, GraphQL, WebSockets and WebTransport.</p>
+						</li>
+						<li class="card">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></svg>
+							<h3>Enterprise infrastructure</h3>
+							<p>Plant-floor networks, server hardware, virtualization and Linux sysadmin work alongside development.</p>
+						</li>
 					</ul>
 				</div>
-			</aside>
+			</div>
+		</section>
 
-			<div id="colorlib-main">
-				<section id="colorlib-hero" class="js-fullheight" data-section="home">
-					<div class="flexslider js-fullheight">
-						<ul class="slides">
-							<li style="background-image: url(images/nvidia.jpg); background-position: center center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner js-fullheight">
-												<div class="desc">
-													<h1>Hi! <br>I'm Mark<br/></h1>
-													<h2>A computer scientist and massive tech-nerd to boot!</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li style="background-image: url(images/graduation.jpg); background-position: left center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<h1>I am a <br>McMaster University Alumnus</br></h1>
-													<h2>Studying computer sciense from 2019 to 2023!</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li style="background-image: url(images/img_bg_1.jpg); background-position: top center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<h1>But I started <br>Much Earlier</br></h1>
-													<h2>I have always loved to code, and started at a much younger age.</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li style="background-image: url(images/my_students_and_i.jpg); background-position: top center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<h1>I love to <br>Mentor</br></h1>
-													<h2>I find pride and enjoyment to teaching the next generation what I know and watching them grow rapidly.</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li style="background-image: url(images/img_bg_2.jpg); background-position: top center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<h1>And Take Pride in my <br>Accomplishments</br></h1>
-													<h2>I used to compete to show my worth and skill in this field, and was proud of what I made!</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li style="background-image: url(images/blood_donation.jpg); background-position: top center; background-repeat: no-repeat;">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<h1>I Try to do <br>Good</br></h1>
-													<h2>In a world where technology is growing more and more powerful, it can sometimes be easy to forget the humanity in the world. I try to never lose sight of our community, both in what I develop, and in what I do.</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
+		<!-- Experience -->
+		<section class="section" id="experience">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">02 — Experience</p>
+					<h2>Where I've worked</h2>
+				</header>
+				<div class="career-chart" id="career-chart" aria-hidden="true">
+					<div class="chart-legend">
+						<span data-kind="industry">Industry</span>
+						<span data-kind="teaching">Teaching</span>
+						<span data-kind="freelance">Freelance</span>
+						<span data-kind="other">Other</span>
+					</div>
+					<div class="chart-rows"></div>
+					<div class="chart-axis"></div>
+				</div>
+				<ol class="timeline">
+					<li class="timeline-item is-current" id="job-martinrea" data-start="2024-03" data-end="" data-kind="industry" data-label="Martinrea">
+						<span class="org-badge" aria-hidden="true">MR</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Design Engineer <span class="at">at <a href="https://martinrea.com/" target="_blank" rel="noopener">Martinrea</a></span></h3>
+								<p class="job-dates"><time datetime="2024-03">Mar 2024</time> – <span class="now-pill">Present</span><span class="duration"></span></p>
+							</header>
+							<p>Joined through the McMaster alumni network to build an internal software platform with a close friend. The work spans React, Python and C++ on the application side and Proxmox, PostgreSQL and Redis underneath. Martinrea has been challenging and rewarding, and has grown my skills as a teacher, mentor and leader as much as a developer.</p>
+							<ul class="tags"><li>React</li><li>Python</li><li>C++</li><li>PostgreSQL</li><li>Redis</li><li>Proxmox</li></ul>
+						</div>
+					</li>
+					<li class="timeline-item" id="job-izzy" data-start="2023-05" data-end="2024-03" data-kind="industry" data-label="Izzy Software">
+						<span class="org-badge" aria-hidden="true">IZ</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Full Stack Developer <span class="at">at <a href="https://izzyplatform.com/" target="_blank" rel="noopener">Izzy Software</a></span></h3>
+								<p class="job-dates"><time datetime="2023-05">May 2023</time> – <time datetime="2024-03">Mar 2024</time><span class="duration"></span></p>
+							</header>
+							<p>My first role after graduating. Built features on a platform handling sensitive data, using Angular on the front end, C# on the back end and in-depth SQL for the data layer.</p>
+							<ul class="tags"><li>Angular</li><li>C#</li><li>SQL</li></ul>
+						</div>
+					</li>
+					<li class="timeline-item" id="job-mcmaster-ta" data-start="2020-09" data-end="2023-05" data-kind="teaching" data-label="McMaster TA">
+						<span class="org-badge" aria-hidden="true">TA</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Teaching Assistant <span class="at">at <a href="https://mcmaster.ca/" target="_blank" rel="noopener">McMaster University</a></span></h3>
+								<p class="job-dates"><time datetime="2020-09">Sep 2020</time> – <time datetime="2023-05">May 2023</time><span class="duration"></span></p>
+							</header>
+							<p>TA from second year onward. For two and a half years on <em>CS1MD3 — Introduction to Programming in Python</em> I managed the course server, generated ideas for tests and exams, and made sure no student question on Piazza or Discord went unanswered. In my final semester I moved to <em>CS2DB3 — Databases</em>, teaching tutorials and grading assignments.</p>
+							<ul class="tags"><li>Python</li><li>SQL</li><li>Teaching</li></ul>
+						</div>
+					</li>
+					<li class="timeline-item" id="job-fyelabs" data-start="2021-05" data-end="2022-08" data-kind="industry" data-label="FYELABS">
+						<span class="org-badge" aria-hidden="true">FY</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Software Engineer <span class="at">at <a href="https://fyelabs.com/" target="_blank" rel="noopener">FYELABS</a></span></h3>
+								<p class="job-dates"><time datetime="2021-05">May 2021</time> – <time datetime="2022-08">Aug 2022</time><span class="duration"></span></p>
+							</header>
+							<p>Hired as a Go back-end engineer and grew into a full-stack role, picking up Vue and React along the way. Also built a Laravel project with Blade templates, broadening my toolkit further.</p>
+							<ul class="tags"><li>Go</li><li>React</li><li>Vue</li><li>Laravel</li></ul>
+						</div>
+					</li>
+					<li class="timeline-item" id="job-jazzmoon" data-start="2017-09" data-end="2021-08" data-kind="freelance" data-label="Jazzmoon">
+						<span class="org-badge" aria-hidden="true">JZ</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Freelance Web Developer <span class="at">as Jazzmoon</span></h3>
+								<p class="job-dates"><time datetime="2017-09">Sep 2017</time> – <time datetime="2021-08">Aug 2021</time><span class="duration"></span></p>
+							</header>
+							<p>Designed, built and maintained affordable websites for members of the local community. Worked directly with clients and handled everything from Cloudflare DNS and domain registration to Linux server administration.</p>
+							<ul class="tags"><li>Full stack</li><li>Linux</li><li>Cloudflare</li></ul>
+						</div>
+					</li>
+					<li class="timeline-item" id="job-mcdonalds" data-start="2017-08" data-end="2021-03" data-kind="other" data-label="McDonald's">
+						<span class="org-badge" aria-hidden="true">MC</span>
+						<div class="timeline-body card">
+							<header class="job-head">
+								<h3>Guest Experience Leader <span class="at">at McDonald's</span></h3>
+								<p class="job-dates"><time datetime="2017-08">Aug 2017</time> – <time datetime="2021-03">Mar 2021</time><span class="duration"></span></p>
+							</header>
+							<p>Balanced customer-facing responsibilities with regular crew duties, including the extra COVID-19 measures. Built multitasking and communication skills I still use every day.</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section class="section" id="skills">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">03 — Skills</p>
+					<h2>What I work with</h2>
+					<p class="section-sub">Rated by how much I've actually shipped with each one: from tools I know well enough to evaluate, up to the ones I use every day. I pick up new technology often, so this list keeps growing.</p>
+				</header>
+				<div class="skills-grid">
+					<div class="card skill-group">
+						<h3>Languages</h3>
+						<ul class="skill-list">
+							<li><span>Python</span><span class="level" data-level="4">Used regularly</span></li>
+							<li><span>C++</span><span class="level" data-level="3">Used in a few projects</span></li>
+							<li><span>Go</span><span class="level" data-level="3">Used in a few projects</span></li>
+							<li><span>Java</span><span class="level" data-level="2">Used in a project</span></li>
+							<li><span>Rust</span><span class="level" data-level="2">Used in a project</span></li>
+							<li><span>C#</span><span class="level" data-level="2">Used in a project</span></li>
 						</ul>
+						<ul class="tags"><li>JavaScript</li><li>TypeScript</li><li>PHP</li></ul>
 					</div>
-				</section>
-
-				<section class="colorlib-about" data-section="about">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="col-md-12">
-										<div class="about-desc">
-											<span class="heading-meta">About Us</span>
-											<h2 class="colorlib-heading">Who Am I?</h2>
-											<p><strong>Hi, I'm Mark Hutchison.</strong> I am a <strong>McMaster Computer Science</strong> alumni looking for opportunities to further my development in the coding world. I have a personal love of the web development world, including both front-end and back-end work. However, if I had to choose, I would always pick back-end development due to the logical nature of the workflow.</p>
-											<p>Over the past 10+ years, I have refined my full stack skills and ready to apply my skills in the workplace. Although it is my preference to work remotely, I would be willing to commute or even relocate if needed.</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-										<div class="services color-1">
-											<span class="icon2"><i class="icon-globe-outline"></i></span>
-											<h3>Web Design</h3>
-										</div>
-									</div>
-									<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-										<div class="services color-2">
-											<span class="icon2"><i class="icon-data"></i></span>
-											<h3>Back-End Dev</h3>
-										</div>
-									</div>
-									<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-										<div class="services color-3">
-											<span class="icon2"><i class="icon-bubble3"></i></span>
-											<h3>Polyglot</h3>
-										</div>
-									</div>
-									<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-										<div class="services color-4">
-											<span class="icon2"><i class="icon-bulb"></i></span>
-											<h3>Graphic Design</h3>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="card skill-group">
+						<h3>Web</h3>
+						<ul class="skill-list">
+							<li><span>React</span><span class="level" data-level="4">Used regularly</span></li>
+							<li><span>Angular</span><span class="level" data-level="2">Used in a project</span></li>
+						</ul>
+						<ul class="tags"><li>Next.js</li><li>Svelte</li><li>Tailwind</li><li>shadcn/ui</li><li>Django</li><li>Echo</li><li>Express</li><li>Fastify</li><li>htmx</li><li>REST</li><li>WebSockets</li><li>WebTransport</li></ul>
 					</div>
-				</section>
-
-				<section class="colorlib-services" data-section="services">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta">What I do?</span>
-								<h2 class="colorlib-heading">Here are some of my expertise</h2>
-							</div>
-						</div>
-						<div class="row row-pt-md">
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-1">
-									<span class="icon">
-										<i class="icon-data"></i>
-									</span>
-									<div class="desc">
-										<h3>Back-End Development</h3>
-										<p style="margin-bottom: 0;">With experience in many languages and frameworks, like:</p>
-										<ul class="text-left">
-											<li>GoLang Echo</li>
-											<li>Python Django</li>
-											<li>Node.JS Express and Fastify</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-2">
-									<span class="icon">
-										<i class="icon-layers2"></i>
-									</span>
-									<div class="desc">
-										<h3>Front-End Development</h3>
-										<p style="margin-bottom: 0;">Experience using:</p>
-										<ul class="text-left">
-											<li>Raw HTML and CSS</li>
-											<li>Toolkit Development with TailwindCSS and ShadCN</li>
-											<li>Frameworks like ReactJS, NextJS, SvelteJS, AngularJS, and more</li>
-											<li>Server Templates like Blade, or HTMLX</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-3">
-									<span class="icon">
-										<i class="icon-data"></i>
-									</span>
-									<div class="desc">
-										<h3>Database Management</h3>
-										<p style="margin-bottom: 0;">Experience with many different types of databases, including:</p>
-										<ul class="text-left">
-											<li>SQL: MySQL, SQLite3, PostgreSQL</li>
-											<li>NoSQL: MongoDB</li>
-											<li>Graph: GraphQL, Neo4J</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-4">
-									<span class="icon">
-										<i class="icon-bubble3"></i>
-									</span>
-									<div class="desc">
-										<h3>Communication Protocols</h3>
-										<p style="margin-bottom: 0;">Experience developing:</p>
-										<ul class="text-left">
-											<li>REST APIs</li>
-											<li>WebSockets</li>
-											<li>WebTransport</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-5">
-									<span class="icon">
-										<i class="icon-hdd-network"></i>
-									</span>
-									<div class="desc">
-										<h3>Enterprise Solution Design</h3>
-										<p>Designed plant floor networks, enterprise server hardware configurations, and performed system administrator duties while also performing my duties as a coder.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center animate-box">
-								<div class="services color-6">
-									<span class="icon">
-										<i class="icon-map"></i>
-									</span>
-									<div class="desc">
-										<h3>Algorithm Design</h3>
-										<p>Capable of converting human instructions into a computer algorithm.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="card skill-group">
+						<h3>Data</h3>
+						<ul class="skill-list">
+							<li><span>SQL</span><span class="level" data-level="3">Used in a few projects</span></li>
+							<li><span>MongoDB / NoSQL</span><span class="level" data-level="2">Used in a project</span></li>
+							<li><span>Graph (Neo4j, GraphQL)</span><span class="level" data-level="2">Used in a project</span></li>
+						</ul>
+						<ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>Redis</li><li>MongoDB</li><li>Neo4j</li></ul>
 					</div>
-				</section>
-
-				<section class="colorlib-skills" data-section="skills">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta">My Specialty</span>
-								<h2 class="colorlib-heading animate-box">My Skills</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<p>As mentioned previously, I am primarily a web-based developer. Majority of my skills are in languages and frameworks related to this field, as it is my passion. The following scales are meant to portray my comfort level with a technology. That being said, I thrive on challenge and routinely go outside of my comfort-zone to learn any new technology I can get my hands on.</p>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>GoLang</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100" style="width:70%">
-											<span>Advanced</span>
-											</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Python</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="100"
-											aria-valuemin="0" aria-valuemax="100" style="width:100%">
-											<span>Expert</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>Java</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="60"
-											aria-valuemin="0" aria-valuemax="100" style="width:60%">
-											<span>Intermediate</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Rust</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>Intermediate</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>SQL</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="90"
-											aria-valuemin="0" aria-valuemax="100" style="width:90%">
-											<span>Advanced</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>NoSQL</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>Intermediate</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Graph Databases</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:40%">
-											<span style="margin-top: 4rem;">Novice</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>Front-End Development (ReactJS)</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="100%"
-											aria-valuemin="0" aria-valuemax="100" style="width:100%">
-											<span style="margin-top: 4rem;">Expert</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Linux/Unix</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="100"
-											aria-valuemin="0" aria-valuemax="100" style="width:100%">
-											<span>Expert</span>
-											</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>Git</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="95"
-											aria-valuemin="0" aria-valuemax="100" style="width:95%">
-											<span>Expert</span>
-											</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>Front-End Development (Angular)</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="55"
-											aria-valuemin="0" aria-valuemax="100" style="width:55%">
-											<span style="margin-top: 4rem;">Intermediate</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>C# REST API Development</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="55"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span style="margin-top: 4rem;">Intermediate</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>C++</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-											aria-valuemin="0" aria-valuemax="100" style="width:75%">
-											<span style="margin-top: 4rem;">Advanced</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="card skill-group">
+						<h3>Infrastructure</h3>
+						<ul class="skill-list">
+							<li><span>Linux / Unix</span><span class="level" data-level="4">Used regularly</span></li>
+							<li><span>Git</span><span class="level" data-level="4">Used regularly</span></li>
+						</ul>
+						<ul class="tags"><li>Proxmox</li><li>Plant-floor networking</li><li>Server hardware</li><li>Cloudflare DNS</li></ul>
 					</div>
-				</section>
+				</div>
+			</div>
+		</section>
 
-				<section class="colorlib-education" data-section="education">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Education</span>
-								<h2 class="colorlib-heading animate-box">Education</h2>
+		<!-- Education -->
+		<section class="section" id="education">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">04 — Education</p>
+					<h2>Education</h2>
+				</header>
+				<div class="edu-grid">
+					<article class="card">
+						<p class="muted mono">2019 — 2023</p>
+						<h3>Bachelor of Applied Science, Computer Science</h3>
+						<p class="muted"><a href="https://mcmaster.ca/" target="_blank" rel="noopener">McMaster University</a> · Hamilton, ON</p>
+						<p>Four years of undergrad, most of it during the COVID-19 pandemic. Tough at times, but a lot of fun — and where I started teaching.</p>
+					</article>
+					<article class="card">
+						<p class="muted mono">2015 — 2019</p>
+						<h3>Secondary School Diploma with SHSM</h3>
+						<p class="muted"><a href="https://act.hdsb.ca/" target="_blank" rel="noopener">Acton District High School</a> · Acton, ON</p>
+						<p>Took every information technology course on offer and graduated with a Specialist High Skills Major (SHSM). Also where I competed in Skills Canada.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section class="section" id="projects">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">05 — Projects</p>
+					<h2>Things I've built</h2>
+					<p class="section-sub">A few personal and academic projects. More on <a href="https://github.com/MoonstarCoding" target="_blank" rel="noopener">GitHub</a>.</p>
+				</header>
+				<div class="projects-grid">
+					<article class="card project">
+						<img src="images/projects/sawthat.webp" alt="SawThat? game screenshot" loading="lazy">
+						<div class="project-body">
+							<h3>SawThat?</h3>
+							<p>McMaster capstone: a modern take on the <em>Scene It?</em> DVD trivia game, with a Go back end running the game over WebSockets.</p>
+							<div class="project-links"><a href="https://github.com/Jazzmoon/SawThat" target="_blank" rel="noopener">Source →</a></div>
+						</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/btd6_autoplay.webp" alt="BTD6 AutoPlay banner" loading="lazy">
+						<div class="project-body">
+							<h3>BTD6 AutoPlay</h3>
+							<p>Started as a small Python image-recognition script to play a game; grew into my introduction to Rust and OCR models.</p>
+							<div class="project-links"><a href="https://github.com/Jazzmoon/btd6_autoplay" target="_blank" rel="noopener">Source →</a></div>
+						</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/spaceship-sim.webp" alt="Spaceship Simulator render" loading="lazy">
+						<div class="project-body">
+							<h3>Spaceship Simulator</h3>
+							<p>C++ / OpenGL piloting simulator with procedurally generated planets, asteroids and quests, built for a computer graphics course.</p>
+							<div class="project-links"><a href="https://github.com/MoonstarCoding/Spaceship-Sim" target="_blank" rel="noopener">Source →</a></div>
+						</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/pixel_painter.webp" alt="Pixel Painter canvas" loading="lazy">
+						<div class="project-body">
+							<h3>Pixel Painter</h3>
+							<p>Pixel-art program built while learning the p5.js library.</p>
+							<div class="project-links">
+								<a href="https://jazzmoon.github.io/pixel-painter/" target="_blank" rel="noopener">Try it →</a>
+								<a href="https://github.com/MoonstarCoding/pixel-painter" target="_blank" rel="noopener">Source →</a>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<div class="fancy-collapse-panel">
-									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingOne">
-												<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Bachelor of Applied Sciences - Computer Science</a>
-												</h4>
-											</div>
-											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<p style="margin-bottom: 0;"><a href="https://mcmaster.ca/">McMaster University - Hamilton, Ontario</a></p>
-															<small>August 2019 to June 2023</small>
-														</div>
-														<div class="col-md-12">
-															<p>I was a 4 year undergrad at McMaster University during the Covid-19 pandemic. Although it was tough, I managed to make it through and it was quite a bit of fun.</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingTwo">
-												<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">High School Secondary Education</a>
-												</h4>
-											</div>
-											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<p style="margin-bottom: 0;"><a href="https://act.hdsb.ca/">Acton District High School - Acton, Ontario</a></p>
-															<small>September 2015 to June 2019</small>
-														</div>
-														<div class="col-md-12">
-															<p>A high school in my home town in which offered many courses in information technologies. Because of this, I decided to graduate with a SHSM: Specialist High School Major.</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/hashi.webp" alt="Hashi puzzle board" loading="lazy">
+						<div class="project-body">
+							<h3>Hashi JS</h3>
+							<p>The classic Hashi bridge-building puzzle, also from the p5.js challenge series.</p>
+							<div class="project-links">
+								<a href="https://jazzmoon.github.io/hashi-js/" target="_blank" rel="noopener">Play it →</a>
+								<a href="https://github.com/MoonstarCoding/hashi-js" target="_blank" rel="noopener">Source →</a>
 							</div>
 						</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/2048.webp" alt="2048 game board" loading="lazy">
+						<div class="project-body">
+							<h3>2048</h3>
+							<p>Java implementation of 2048 for a software specification course.</p>
+							<div class="project-links"><a href="https://github.com/MoonstarCoding/2048" target="_blank" rel="noopener">Source →</a></div>
+						</div>
+					</article>
+					<article class="card project">
+						<img src="images/projects/skills.webp" alt="Skills Canada website" loading="lazy">
+						<div class="project-body">
+							<h3>Skills Canada 2019</h3>
+							<p>A website built in two days for the Skills Canada national coding competition.</p>
+							<div class="project-links"><a href="https://github.com/MoonstarCoding/skillsCanada2019" target="_blank" rel="noopener">Source →</a></div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Photos -->
+		<section class="section" id="photos">
+			<div class="container">
+				<header class="section-head">
+					<p class="kicker">06 — Beyond the code</p>
+					<h2>Recent moments</h2>
+					<p class="section-sub">Conferences, museums and the odd costume. Click a photo to enlarge.</p>
+				</header>
+				<div class="gallery">
+					<figure class="wide"><button type="button"><img src="images/gallery/gtc-keynote.webp" alt="Keynote stage at NVIDIA GTC 2025" loading="lazy" width="1600" height="900"></button><figcaption>NVIDIA GTC keynote · San Jose, 2025</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/gtc-booth.webp" alt="Mark at an NVIDIA partner booth at GTC" loading="lazy" width="900" height="1600"></button><figcaption>On the GTC show floor</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/gtc-ai-portrait.webp" alt="AI-generated portrait of Mark on a kiosk display" loading="lazy" width="900" height="1600"></button><figcaption>Getting AI-portraited at GTC</figcaption></figure>
+					<figure class="wide"><button type="button"><img src="images/gallery/gtc-badge.webp" alt="Selfie of Mark wearing a GTC badge" loading="lazy" width="1600" height="900"></button><figcaption>Badge on, GTC 2025</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/mystery-spot.webp" alt="Mark standing at an impossible angle in a tilted wooden house" loading="lazy" width="900" height="1600"></button><figcaption>Defying physics · Santa Cruz</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/mandalorian.webp" alt="Mark in a Mandalorian costume" loading="lazy" width="1200" height="1600"></button><figcaption>This is the way · Halloween 2025</figcaption></figure>
+					<figure class="wide"><button type="button"><img src="images/gallery/rom-gallery.webp" alt="Mark next to a classical marble bust in a museum gallery" loading="lazy" width="1600" height="1200"></button><figcaption>Royal Ontario Museum, 2026</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/blue-suit.webp" alt="Mark in a blue suit outdoors in autumn" loading="lazy" width="900" height="1600"></button><figcaption>Suited up, fall 2025</figcaption></figure>
+					<figure><button type="button"><img src="images/gallery/fan-expo-r2d2.webp" alt="An R2-D2 droid at Fan Expo" loading="lazy" width="900" height="1600"></button><figcaption>Fan Expo Canada, 2026</figcaption></figure>
+					<figure class="wide"><button type="button"><img src="images/gallery/rom-dino-dome.webp" alt="Mark peeking out of a bubble dome inside a fossil exhibit" loading="lazy" width="1600" height="1200"></button><figcaption>Up close with the fossils at the ROM</figcaption></figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="section" id="contact">
+			<div class="container">
+				<div class="contact card">
+					<div>
+						<p class="kicker">07 — Contact</p>
+						<h2>Let's talk</h2>
+						<p class="section-sub">Open to interesting problems, collaborations and a good tech conversation. LinkedIn is the best way to reach me.</p>
 					</div>
-				</section>
+					<ul class="contact-list">
+						<li>
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+							<a href="https://linkedin.com/in/mark-j-hutchison/" target="_blank" rel="noopener">linkedin.com/in/mark-j-hutchison</a>
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.7 5 5 0 0 0-.1-3.8s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3 1.7 5.1 2 5.1 2a5 5 0 0 0-.1 3.8A5.4 5.4 0 0 0 3.5 9.5c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+							<a href="https://github.com/MoonstarCoding" target="_blank" rel="noopener">github.com/MoonstarCoding</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
 
-				<section class="colorlib-experience" data-section="experience">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Experience</span>
-								<h2 class="colorlib-heading animate-box">Work Experience</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-1">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-													<h2><a href="https://martinrea.com/">Design Engineer at <strong>Martinrea</strong></a> <span>March 2024 - Current</span></h2>
-													<p>After networking with some of my fellow McMaster University graduates, I heard of the oppurtunity to work on an internal software project with a close friend of mine at Martinrea. This project required knowledge in React, Python, C++, and various technologies like Proxmox, PostgreSQL, Redis, and more. Martinrea has been a challenging, yet rewarding, workplace in which has not only strengthend my skills as a developer, but my skills as a teacher, mentor, and leader within my field.</p>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-2">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-													<h2><a href="https://izzyplatform.com/">Full Stack Developer at <strong>Izzy Software</strong></a> <span>May 2023 - March 2024</span></h2>
-													<p>Post-graduation, Izzy Software was the first company to take me on as an employee. They worked on many sensitive materials, that required knowledge in Angular frontend tools, C# backend tools, and in-depth SQL knowledge for databasing. This job put my skills to the test multiple times, and I am sure to say that -- if you asked -- they would say I met them all.</p>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-3">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-													<h2><a href="https://mcmaster.ca/">Teaching Assistant at <strong>McMaster University</strong></a> <span>September 2020 - May 2023</span></h2>
-													<p>Since 2nd year, due to my high grades, I have been acting as a Teaching Assistant. For the first 2 and a half years, I worked non-stop assisting with the "CS1MD3 Introduction to Programming in Python" course. I acted as server manager for the program, as well as the idea generator for many of the tests and exams. I also ensured that student questions were not left unanswered on our official course Piazza and Discord.<br />However, after the departure of the professor who I worked with  - Nicholas Moore, I moved on to my final semester assisting with the "CS2DB3 - Databases" course. In databases, it was my task to teach tutorials and grade student assignments.</p>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-4">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-													<h2><a href="https://fyelabs.com/">Software Engineer at <strong>FYELABS</strong></a> <span>May 2021 - August 2022</span></h2>
-													<p>Originally, I was hired on to act as a back-end engineer in the GoLang language. However, as my time increased at the company, I began transitioning into a full stack role. I learned the basics of VueJS, as well as an intermediate knowledge of ReactJS. Although I am still stronger with back-end technologies, I am capable in whichever work I am required. I also worked on a project coded in Laravel, using PHP Blade to generate the front-end, while working here. That project allowed me to experiment with a different language and framework, diversifying my skill-set even more.</p>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-5">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-												<h2>Freelance Web-Developer <span>September 2017 - August 2021</span></h2>
-												<p>I worked as a self-employed full-stack web developer under the name Jazzmoon. We would be approached by members of the community looking for a website and we would develop and maintain websites for them for a cheap price. It gave me the opportunity to work with clients on a closer level, as well as good practice for my skills in various frameworks and technologies, such as CloudFlare DNS set-up, Linux server work, domain registration, and more.</p>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-6">
-													<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-												<h2><a href="https://careers.mcdonalds.ca/">Guest Experience Leader at <strong>McDonald's</strong></a> <span>August 2017 - March 2021</span></h2>
-													<p>While working as a Guest Experience Leader at McDonald's, it was duty to ensure that I presented myself in the best customer-facing manner possible while balancing the duties of regular crew. I would always be multitasking helping my fellow co-workers behind the counter with my tasks beyond the counter, such as taking surveys, wiping down tables, or the extra Covid-19 measures. This job taught me great multitasking skills that would continue to help me outside of the customer service industry.</p>
-											</div>
-										</div>
-									</article>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span id="year">2026</span> Mark Hutchison · He/Him</p>
+			<a href="#top">Back to top ↑</a>
+		</div>
+	</footer>
 
-				<section class="colorlib-work" data-section="work">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta"><a href="https://github.com/MoonstarCoding">My Projects</a></span>
-								<h2 class="colorlib-heading animate-box">Recent Work</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/sawthat.jpg);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">SawThat?</a></h3>
-											<span>McMaster University Capstone project</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/Jazzmoon/SawThat");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span><a href="https://github.com/Jazzmoon/SawThat" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/spaceship-sim.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">Spaceship Simulator</a></h3>
-											<span>C++ OpenGL Graphics Project</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/MoonstarCoding/Spaceship-Sim");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span><a href="https://github.com/MoonstarCoding/Spaceship-Sim" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/2048.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">2048</a></h3>
-											<span>Java Project for Software Specification Course</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/MoonstarCoding/2048");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span><a href="https://github.com/MoonstarCoding/2048" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/btd6_autoplay.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">BTD6 AutoPlay</a></h3>
-											<span>Although originally a small, Python based image recognition script to play a game; this project has evolved near infitely from that. Becoming my introduction to Rust, I used this project to become familiar with image-to-text recognition models like OCR, as well as the entirety of the Rust language as a whole.</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/Jazzmoon/btd6_autoplay");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span><a href="https://github.com/Jazzmoon/btd6_autoplay" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/pixel_painter.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">Pixel Painter</a></h3>
-											<span>Art Program in which was a part of a series of challenges to learn the P5.JS library.</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/MoonstarCoding/pixel-painter");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span>
-													<a href="https://jazzmoon.github.io/pixel-painter/" target="_blank"><i class="icon-link"></i> Play it!</a>
-												</span>
-												<span>
-													<a href="https://github.com/MoonstarCoding/pixel-painter" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a>
-												</span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/hashi.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">Hashi JS</a></h3>
-											<span>Standard Hashi bridge game in which was a part of a series of challenges to learn the P5.JS library.</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/MoonstarCoding/hashi-js");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span>
-													<a href="https://jazzmoon.github.io/hashi-js/" target="_blank"><i class="icon-link"></i> Play it!</a>
-												</span>
-												<span>
-													<a href="https://github.com/MoonstarCoding/hashi-js" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a>
-												</span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/skills.png);">
-									<div class="desc">
-										<div class="con">
-											<h3><a href="work.html">Skills Canada</a></h3>
-											<span>Website developed in 2 days for the Skills Canada National coding competition.</span>
-											<p class="icon">
-												<span>
-													<a onclick='clipboard("https://github.com/MoonstarCoding/skillsCanada2019");'>
-														<i class="icon-share3"></i>
-													</a>
-												</span>
-												<span>
-													<a href="https://github.com/MoonstarCoding/skillsCanada2019" target="_blank"><i class="icon-arrow-right-thick"></i> Check it out!</a>
-												</span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+	<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+		<button class="icon-btn lightbox-close" type="button" aria-label="Close">
+			<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+		</button>
+		<img alt="">
+		<p class="lightbox-caption"></p>
+	</dialog>
 
-				<section class="colorlib-contact" data-section="contact">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Get in Touch</span>
-								<h2 class="colorlib-heading">Contact</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-5">
-								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-user-outline"></i>
-									</div>
-									<div class="colorlib-text">
-										<p style="margin-bottom: 0;">Mark Hutchion<br/>(He/Him/His)</p>
-										<p><a href="https://github.com/MoonstarCoding">https://github.com/MoonstarCoding</a></p>
-									</div>
-								</div>
-
-								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-mail"></i>
-									</div>
-									<div class="colorlib-text">
-										<p><a href="mailto:email-removed">email-removed</a></p>
-									</div>
-								</div>
-
-								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-phone"></i>
-									</div>
-									<div class="colorlib-text">
-										<p><a href="tel:phone-removed">phone-removed</a></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-7 col-md-push-1">
-								<div class="row">
-									<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-										<h3>Available for Interview:</h3>
-										<ul id="availability-schedule" class="text-left"></ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			</div><!-- end:colorlib-main -->
-		</div><!-- end:container-wrap -->
-		</div><!-- end:colorlib-page -->
-
-		<!-- Availability Schedule Generator -->
-		<script lang="js">
-			function formatSchedule(utcStart, utcEnd) {
-				const options = { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, timeZoneName: 'short', hour: 'numeric', minute: 'numeric', hour12: true },
-					start = new Date(utcStart).toLocaleTimeString('en-US', options),
-					end = new Date(utcEnd).toLocaleTimeString('en-US', options);
-				return `${start} - ${end}`;
-			}
-			const schedule = {
-					"Sunday": {"start": "2023-05-07T16:30:00Z", "end": "2023-05-07T22:00:00Z"},
-					"Monday": {"start": "2023-05-08T13:00:00Z", "end": "2023-05-08T22:00:00Z"},
-					"Tuesday": {"start": "2023-05-09T13:00:00Z", "end": "2023-05-09T22:00:00Z"},
-					"Wednesday": {"start": "2023-05-10T13:00:00Z", "end": "2023-05-10T22:00:00Z"},
-					"Thursday": {"start": "2023-05-11T13:00:00Z", "end": "2023-05-11T22:00:00Z"},
-					"Friday": {"start": "2023-05-12T13:00:00Z", "end": "2023-05-12T21:00:00Z"},
-					"Saturday": {"start": "2023-05-13T14:30:00Z", "end": "2023-05-13T22:00:00Z"}
-				},
-				scheduleList = document.getElementById("availability-schedule");
-
-			for (const day in schedule) {
-				const {start, end} = schedule[day];
-				// Create Elements
-				const li = document.createElement("li"),
-					h5 = document.createElement("h5"),
-					strong = document.createElement("strong");
-				// Assemble
-				strong.appendChild(document.createTextNode(`${day}: `));
-				h5.appendChild(strong);
-				h5.appendChild(document.createTextNode(formatSchedule(start, end)));
-				li.appendChild(h5);
-				scheduleList.appendChild(li);
-			}
-		</script>
-
-		<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
-		<!-- jQuery Easing -->
-		<script src="js/jquery.easing.1.3.js"></script>
-		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
-		<!-- Waypoints -->
-		<script src="js/jquery.waypoints.min.js"></script>
-		<!-- Flexslider -->
-		<script src="js/jquery.flexslider-min.js"></script>
-		<!-- Owl carousel -->
-		<script src="js/owl.carousel.min.js"></script>
-		<!-- Counters -->
-		<script src="js/jquery.countTo.js"></script>
-
-		<!-- MAIN JS -->
-		<script src="js/main.js"></script>
-	</body>
+	<script src="js/site.js" defer></script>
+</body>
 </html>
-
