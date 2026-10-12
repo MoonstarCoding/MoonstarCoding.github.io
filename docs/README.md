@@ -4,7 +4,7 @@ Now don't be alarmed, what you're seeing here is not a mistake. GitHub pages by 
 
 I highly recomending going to my GitHub for a more professional looking "About Me" page until I implement one here.
 
-[My GitHub](https://github.com/AstroCoding)
+[My GitHub](https://github.com/MoonstarCoding/)
 
 Or, you can go to an exiting page I have set up showing off my many projects:
 
@@ -20,14 +20,14 @@ A fun Python bot that will load JSON configuration files and play the game accor
 
 This is a little sample resume I have been working on. It is nothing special, but it does have a couple websites that I developed freelance, and some general information about myself.
 
-[Check out mark-hutchison.codes](https://AstroCoding.github.io/mark-hutchison.codes/)
+[Check out mark-hutchison.codes](https://MoonstarCoding.github.io/mark-hutchison.codes/)
 
 ### Andrew's CSS Template
 
 My friend Andrew has never been good at finding where to start when designing a webpage. He loves minimalistic desigs, and he also knows he needs to be mobile friendly, but he isn't very good at CSS.
 So, being a cool guy, I made him a CSS template to use, and put it on GitHub pages so he could see how it felt on multiple devices.
 
-[Check Out Andrew's CSS Template](https://AstroCoding.github.io/andrew/)
+[Check Out Andrew's CSS Template](https://MoonstarCoding.github.io/andrew/)
 
 ### Pixel Painter
 
@@ -44,10 +44,10 @@ I am addicted to the game Hashi. I absolutely love the varients I have played an
 
 Alright, this was the sadest defeat of my life. I had gotten something that I thought was working and did it in the time frame. I was so pleased, andd even continued adding questions for it after I was done to make it playable... And then I actually QA tested it... Yeah, it is completely busted, but it was still a lot of fun and I will continue to show it off as a testiment to my skill and an example that nothing is truely perfect.
 
-[Check Out Trivia](https://AstroCoding.github.io/Trivia/)
+[Check Out Trivia](https://MoonstarCoding.github.io/Trivia/)
 
 ### The Dorm Entertainment System Blog
 
 A first year Multi-Media project that became this. Man, it waas fun making the website for this, although it was nothing special. I really enjoyed the project as a whole... even if I did quite a bit of it solo.
 
-[Check Out The Blog](https://AstroCoding.github.io/dormEntertainmentSystem/)
+[Check Out The Blog](https://MoonstarCoding.github.io/dormEntertainmentSystem/)
